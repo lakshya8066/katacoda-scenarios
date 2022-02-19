@@ -1,8 +1,8 @@
-# Install Minikube
+# Start Minikube
 
 `minikube start`{{execute}}
  
- # Update Helm
+# Update Helm
 
  `curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -`{{execute}}
  `sudo apt-get install apt-transport-https --yes`{{execute}}
