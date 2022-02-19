@@ -25,4 +25,4 @@ This katacoda Scenario has Helm v2 installed by default. Run these commands to m
 
  4. `sudo apt-get update`{{execute}}
 
- 5.  `sudo apt-get install helm`{{execute}}
+ 5. `sudo apt-get install helm`{{execute}}
