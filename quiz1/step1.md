@@ -18,7 +18,6 @@ This katacoda Scenario has Helm v2 installed by default. Run these commands to m
 
  1. `curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -`{{execute}}
 
-
  2. `sudo apt-get install apt-transport-https --yes`{{execute}}
 
  3. `echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list`{{execute}}
