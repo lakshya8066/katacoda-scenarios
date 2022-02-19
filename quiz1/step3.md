@@ -1,3 +1,7 @@
+# verify the installation
+
+`kubectl get po -n chaos-testing`{{execute}}
+
 # Check Version
 
 Check the version of Chaos Mesh 
