@@ -11,6 +11,11 @@
  in default mode
 
  `minikube start`{{execute}}
+
+Follow the next steps after the output:
+```
+* Done! kubectl is now configured to use "minikube"
+```
  
 ## Update Helm
 
