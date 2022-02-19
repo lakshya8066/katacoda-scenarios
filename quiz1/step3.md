@@ -1,7 +1,9 @@
-# Check the version of chaos-mesh 
+# Check Version
 
-`docker images | grep -h chaos-mesh/chaos-mesh | awk '{print $2}'`{{execute}}
+Check the version of Chaos Mesh 
 
-# Check Kubernetes Version
+ `docker images | grep -h chaos-mesh/chaos-mesh | awk '{print $2}'`{{execute}}
+
+Check Kubernetes version
  
  `kubectl version --short=true`{{execute}}
