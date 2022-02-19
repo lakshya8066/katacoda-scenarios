@@ -1,1 +1,1 @@
-`minikube start`{{It will start minikube}}
+`minikube start`{{execute}}
