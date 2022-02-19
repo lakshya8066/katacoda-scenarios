@@ -1,3 +1,3 @@
-# View the installable versions of Chaos Mesh
+# Check the version of chaos-mesh 
 
-`helm search repo chaos-mesh`{{execute}}
+`docker images | grep -h chaos-mesh/chaos-mesh | awk '{print $2}'`{{execute}}
