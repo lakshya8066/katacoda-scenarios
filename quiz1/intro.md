@@ -1,0 +1,1 @@
+`minikube start1`{{minikube start}}
