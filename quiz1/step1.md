@@ -3,7 +3,7 @@
 ## Start Minikube
 
  We will use minikube to install chaos mesh on a Kubernetes CLuster.
- `minikube start` spins up a kubernetes cluster with a single master nocde.
+ `minikube start` spins up a kubernetes cluster with a single master node.
  It takes about 
  - 2 CPUs or more
  - 2GB of free memory
@@ -12,14 +12,26 @@
 
  `minikube start`{{execute}}
 
-Follow the next steps after the output:
+Output:
 ```
+* minikube v1.8.1 on Ubuntu 18.04
+* Using the none driver based on user configuration
+* Running on localhost (CPUs=2, Memory=2460MB, Disk=145651MB) ...
+* OS release is Ubuntu 18.04.4 LTS
+* Preparing Kubernetes v1.17.3 on Docker 19.03.6 ...
+  - kubelet.resolv-conf=/run/systemd/resolve/resolv.conf
+* Launching Kubernetes ... 
+* Enabling addons: default-storageclass, storage-provisioner
+* Configuring local host environment ...
+* Waiting for cluster to come online ...
 * Done! kubectl is now configured to use "minikube"
 ```
  
 ## Update Helm
 
-This katacoda Scenario has Helm v2 installed by default. Run these commands to migrate to helm v3.
+This Katacoda Scenario has Helm v2 installed by default. 
+
+Run these commands to migrate to helm v3.
 
  1. `curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -`{{execute}}
 

@@ -1,4 +1,4 @@
-# Installing Chaos-mesh
+# Installing Chaos Mesh
 
 **Add Chaos Mesh repository**​
 
@@ -28,7 +28,7 @@ Output:
 namespace/chaos-testing created
 ```
 
-**Install Helm** 
+**Install Helm Charts** 
 
 `helm install chaos-mesh chaos-mesh/chaos-mesh -n=chaos-testing --version 2.1.3`{{execute}}
 

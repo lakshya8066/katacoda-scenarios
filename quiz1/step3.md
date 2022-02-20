@@ -1,5 +1,7 @@
 # verify the installation
 
+Verify the installation of Chaos Mesh
+
 `kubectl get po -n chaos-testing`{{execute}}
 
 Output:
