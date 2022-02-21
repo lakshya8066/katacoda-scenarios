@@ -1,6 +1,6 @@
 {
-  "title": "quiz1_multi_node",
-  "description": "Test multiple node cluster on minikube",
+  "title": "Multi-node",
+  "description": "test multinode on a k8s env",
   "difficulty": "Beginner",
   "time": "5",
   "details": {
@@ -8,10 +8,6 @@
       {
         "title": "Step 1",
         "text": "step1.md"
-      },
-      {
-        "title": "Step 2",
-        "text": "step2.md"
       }
     ],
     "intro": {
@@ -25,6 +21,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "ubuntu:2004"
+    "imageid": "kubernetes-cluster-running"
   }
 }
