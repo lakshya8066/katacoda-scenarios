@@ -10,22 +10,43 @@
  - 20GB of free disk space
  in default mode
 
- `minikube start`{{execute}}
+ If you check the current version of minikube `minikube version`{{execute}}
+ 
+ It is `1.8.0` and in order to run a multi node cluster, we need minikube 1.10.1 or higher. 
 
-Output:
+To update minikube to the latest:
+
+ Download the binary using curl:
+
+ `curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64`{{execute}}
+
+ Install minikube:
+
+ `sudo install minikube-linux-amd64 /usr/local/bin/minikube`{{execute}}
+
+ Check version: `minikube version`{{execute}}
+
+ It should be `v1.25.1` now
+ 
+ `minikube start --force --nodes 2 --driver=docker`{{execute}}
+
+Output when a cluster is created:
 ```
-* minikube v1.8.1 on Ubuntu 18.04
-* Using the none driver based on user configuration
-* Running on localhost (CPUs=2, Memory=2460MB, Disk=145651MB) ...
-* OS release is Ubuntu 18.04.4 LTS
-* Preparing Kubernetes v1.17.3 on Docker 19.03.6 ...
-  - kubelet.resolv-conf=/run/systemd/resolve/resolv.conf
-* Launching Kubernetes ... 
-* Enabling addons: default-storageclass, storage-provisioner
-* Configuring local host environment ...
-* Waiting for cluster to come online ...
-* Done! kubectl is now configured to use "minikube"
+* Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+
 ```
+
+Once the cluster is up and running, you can check the node in the cluster by:
+
+`kubectl get nodes`{{execute}}
+
+ There should be `Ready` status:
+
+ ```
+ NAME           STATUS   ROLES    AGE     VERSION
+ minikube       Ready    master   5m54s   v1.17.3
+ minikube-m02   Ready    <none>   5m      v1.17.3 
+ ```
  
 ## Update Helm
 

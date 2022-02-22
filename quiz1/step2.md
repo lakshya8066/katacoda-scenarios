@@ -28,6 +28,20 @@ Output:
 namespace/chaos-testing created
 ```
 
+You can check a namespace called `chaos-testing` will be present:
+
+`kubectl get ns`{{execute}}
+
+Output:
+```
+NAME              STATUS   AGE
+chaos-testing     Active   9s
+default           Active   12m
+kube-node-lease   Active   12m
+kube-public       Active   12m
+kube-system       Active   12m
+```
+
 **Install Helm Charts** 
 
 `helm install chaos-mesh chaos-mesh/chaos-mesh -n=chaos-testing --version 2.1.3`{{execute}}

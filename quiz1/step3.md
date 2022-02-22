@@ -9,14 +9,28 @@ Output:
 Pods might take some time to get ready.
 
 ```
-NAME                                        READY   STATUS    RESTARTS   AGE
-chaos-controller-manager-569467c84f-6mtrw   1/1     Running   0          99s
-chaos-controller-manager-569467c84f-ds7bc   1/1     Running   0          99s
-chaos-controller-manager-569467c84f-gv2d6   1/1     Running   0          99s
-chaos-daemon-jvhg9                          1/1     Running   0          99s
-chaos-dashboard-688d4bbdb-j44z5             1/1     Running   0          99s
+chaos-controller-manager-6d564977b8-5m8hg   1/1     Running   0          16m
+chaos-controller-manager-6d564977b8-7lqt4   1/1     Running   0          16m
+chaos-controller-manager-6d564977b8-nvthn   1/1     Running   0          16m
+chaos-daemon-5946m                          1/1     Running   0          16m
+chaos-daemon-tl4p9                          1/1     Running   0          16m
+chaos-dashboard-688d4bbdb-89c99             1/1     Running   0          16m
 ```
+Here if you run `kubectl get po -o wide -n chaos-testing`{{execute}} 
 
+You can also see which pods are running in which nodes
+
+Output:
+
+```
+NAME                                        READY   STATUS    RESTARTS   AGE   IP           NODE           NOMINATED NODE   READINESS GATES
+chaos-controller-manager-6d564977b8-5m8hg   1/1     Running   0          17m   10.244.1.3   minikube-m02   <none>           <none>
+chaos-controller-manager-6d564977b8-7lqt4   1/1     Running   0          17m   10.244.1.4   minikube-m02   <none>           <none>
+chaos-controller-manager-6d564977b8-nvthn   1/1     Running   0          17m   10.244.0.3   minikube       <none>           <none>
+chaos-daemon-5946m                          1/1     Running   0          17m   10.244.1.5   minikube-m02   <none>           <none>
+chaos-daemon-tl4p9                          1/1     Running   0          17m   10.244.0.4   minikube       <none>           <none>
+chaos-dashboard-688d4bbdb-89c99             1/1     Running   0          17m   10.244.1.2   minikube-m02   <none>           <none>
+```
 # Check Version
 
 **Check the version of Chaos Mesh**
