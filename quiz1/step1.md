@@ -2,8 +2,8 @@
 
 ## Start Minikube
 
- We will use minikube to install chaos mesh on a Kubernetes CLuster.
- `minikube start` spins up a kubernetes cluster with a single master node.
+ We will use minikube to install Chaos Mesh on a Kubernetes cluster.
+ `minikube start` command spins up a kubernetes cluster.
  It takes about 
  - 2 CPUs or more
  - 2GB of free memory
@@ -14,7 +14,7 @@
  
  It is `1.8.1` and in order to run a multi node cluster, we need minikube 1.10.1 or higher as specified in the [docs](https://minikube.sigs.k8s.io/docs/tutorials/multi_node/). 
 
-To update minikube to the latest:
+We need to update minikube to the latest version.
 
  Download the binary using curl:
 
@@ -26,9 +26,11 @@ To update minikube to the latest:
 
  Check version: `minikube version`{{execute}}
 
- It should be `v1.25.1` now
+ It should be `v1.25.1` now.
 
- We can start minikube now:
+ We can start minikube now with 2 nodes and `docker` as the driver. Here we are using the flag `--force` for the tutorial because running minikube as root and driver as docker, is not allowed. `--force` flag is **highly unrecommended** in production environment. To use minikube with the `--force` flag, follow the instruction from the docker [documentation](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) to add a new user and run docker as non root.
+ 
+ For now we can go ahead with the `--force` flag for the tutorial.
  
  `minikube start --force --nodes 2 --driver=docker`{{execute}}
 
