@@ -28,13 +28,13 @@ We need to update minikube to the latest version.
 
  It should be `v1.25.1` now.
 
- We can start minikube now with 2 nodes and `docker` as the driver. Here we are using the flag `--force` for the tutorial because running minikube as root and driver as docker, is not allowed. `--force` flag is **highly unrecommended** in production environment. To use minikube with the `--force` flag, follow the instruction from the docker [documentation](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) to add a new user and run docker as non root.
+ We can start minikube now with 2 nodes and `docker` as the driver. Here we are using the flag `--force` for the tutorial because running minikube as root and driver as docker, is not allowed. But `--force` flag is **highly unrecommended** in production environment, we will only be using this for the tutorial. To use minikube without the `--force` flag, follow the instruction from the docker [documentation](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) to add a new user and run docker as non root.
  
  For now we can go ahead with the `--force` flag for the tutorial.
- 
+
  `minikube start --force --nodes 2 --driver=docker`{{execute}}
 
-  This may take some time to start.
+  This may take few minutes to start.
 
 Output when a cluster is created:
 ```
@@ -42,11 +42,11 @@ Output when a cluster is created:
 
 ```
 
-Once the cluster is up and running, you can check the node in the cluster by:
+Once the cluster is up and running, check the nodes in the cluster by:
 
 `kubectl get nodes`{{execute}}
 
- There should be `Ready` status, if not, check again.
+ There should be a `Ready` under `STATUS` for both the nodes, if not, check again in a few seconds.
 
  ```
  NAME           STATUS   ROLES    AGE     VERSION
