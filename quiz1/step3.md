@@ -46,7 +46,7 @@ chaos-dashboard-688d4bbdb-89c99             1/1     Running   0          17m   1
 
 **Check the version of Chaos Mesh**
 
- `docker images | grep -h chaos-mesh/chaos-mesh | awk '{print $2}'`{{execute}}
+ `kubectl describe deployment -n chaos-testing chaos-controller-manager | grep chaos-mesh/chaos-mesh | awk '{print $2}'`{{execute}}
 
  Output:
 

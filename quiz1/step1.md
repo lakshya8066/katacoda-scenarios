@@ -12,7 +12,7 @@
 
  If you check the current version of minikube `minikube version`{{execute}}
  
- It is `1.8.0` and in order to run a multi node cluster, we need minikube 1.10.1 or higher. 
+ It is `1.8.1` and in order to run a multi node cluster, we need minikube 1.10.1 or higher as specified in the [docs](https://minikube.sigs.k8s.io/docs/tutorials/multi_node/). 
 
 To update minikube to the latest:
 
@@ -27,8 +27,12 @@ To update minikube to the latest:
  Check version: `minikube version`{{execute}}
 
  It should be `v1.25.1` now
+
+ We can start minikube now:
  
  `minikube start --force --nodes 2 --driver=docker`{{execute}}
+
+  This may take some time to start.
 
 Output when a cluster is created:
 ```
@@ -40,7 +44,7 @@ Once the cluster is up and running, you can check the node in the cluster by:
 
 `kubectl get nodes`{{execute}}
 
- There should be `Ready` status:
+ There should be `Ready` status, if not, check again.
 
  ```
  NAME           STATUS   ROLES    AGE     VERSION
