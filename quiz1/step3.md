@@ -2,6 +2,17 @@
 
 Verify the installation of Chaos Mesh
 
+You can check the deployments in the chaos-testing namespace `kubectl get deployments -n chaos-testing`{{execute}}
+
+Output:
+ 
+```
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+chaos-controller-manager   3/3     3            3           90s
+chaos-dashboard            1/1     1            1           90s
+```
+You can get a list of deployed pods in the chaos-testing namespace. 
+
 `kubectl get po -n chaos-testing`{{execute}}
 
 Output:
